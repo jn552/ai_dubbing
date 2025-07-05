@@ -1,0 +1,8 @@
+torch>=2.6.0
+transformers==4.39.3
+TTS==0.22.0
+ffmpeg-python
+nltk
+sentencepiece
+whisper
+sacremoses
