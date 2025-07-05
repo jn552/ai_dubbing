@@ -26,7 +26,7 @@ def main():
 
     # translate
     print("Starting Translation")
-    translated_text = translate_text(transcript_path, source_lang="en", target_lang="zh")
+    translated_text, translated_chunks = translate_text(transcript_path, source_lang="en", target_lang="zh")
 
     # save translated text
     translated_text_path = os.path.join(base_output_dir, base_name, f"{base_name}.translated.txt")
@@ -37,7 +37,7 @@ def main():
 
     # generating translated audio with cloned voice
     translated_audio_path = os.path.join(base_output_dir, base_name, f"{base_name}.translated.audio.wav")
-    clone_voice(translated_text, audio_file, translated_audio_path)
+    clone_voice(translated_chunks, audio_file, translated_audio_path)
 
 if __name__ == "__main__":
     main()

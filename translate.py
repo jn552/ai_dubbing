@@ -14,7 +14,8 @@ def translate_text(text_path, source_lang="en", target_lang="zh"):
         target_lag (str): target langage code (e.g., "en", "es", etc.)
     
     Returns:
-        - translated text
+        - translated text (str)
+        - translated chunks in text (list[str]) to reduce voice drift in cloning
     """
 
     # getting models and tokenizers
@@ -37,7 +38,7 @@ def translate_text(text_path, source_lang="en", target_lang="zh"):
         translated_chunk = tokenizer.decode(translated[0], skip_special_tokens=True)
         translated_chunks.append(translated_chunk)
 
-    return " ".join(translated_chunks)
+    return " ".join(translated_chunks), translated_chunks
 
 def main():
     
