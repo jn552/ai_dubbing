@@ -1,0 +1,42 @@
+{
+  "text": " Hi, this is me testing, making an audio file to see if this is being transcribed properly.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 6.72,
+      "text": " Hi, this is me testing, making an audio file to see if this is being transcribed properly.",
+      "tokens": [
+        50364,
+        2421,
+        11,
+        341,
+        307,
+        385,
+        4997,
+        11,
+        1455,
+        364,
+        6278,
+        3991,
+        281,
+        536,
+        498,
+        341,
+        307,
+        885,
+        1145,
+        18732,
+        6108,
+        13,
+        50700
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.21379252274831137,
+      "compression_ratio": 1.1111111111111112,
+      "no_speech_prob": 0.00226174877025187
+    }
+  ],
+  "language": "en"
+}
