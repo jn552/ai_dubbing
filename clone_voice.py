@@ -35,7 +35,7 @@ def concat_wave(wav_files, output_path):
             out.writeframes(data[0])
 
 
-def clone_voice(text_chunks, reference_audio_path, output_path):
+def clone_voice(text_chunks, reference_audio_path, output_path, target_lang):
     """
     Generates speech audio in the language of text that mimics original voice
 
@@ -66,7 +66,7 @@ def clone_voice(text_chunks, reference_audio_path, output_path):
         chunk_wav_files.append(chunk_output_path)
 
         # Generate cloned speech and save to output path
-        tts_model.tts_to_file(text=chunk, speaker_wav=wav_path, language="zh-cn", file_path=chunk_output_path)
+        tts_model.tts_to_file(text=chunk, speaker_wav=wav_path, language=target_lang, file_path=chunk_output_path)
         
     # concatenating each chunk's .wav file into one
     concat_wave(chunk_wav_files, output_path=output_path)
@@ -74,7 +74,7 @@ def clone_voice(text_chunks, reference_audio_path, output_path):
     # delete temporary wave file for soure audio
     if os.path.exists(wav_path):
         os.remove(wav_path)
-        
+
     # delete each chunk's .wav
     for wav in chunk_wav_files:
         if os.path.exists(wav):

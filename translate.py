@@ -4,7 +4,7 @@ from transformers import MarianMTModel, MarianTokenizer
 
 nltk.download("punkt_tab")
 
-def translate_text(text_path, source_lang="en", target_lang="zh"):
+def translate_text(text_path, source_lang, target_lang):
     """
     Translates text from source langauge to target langage
 
@@ -17,6 +17,7 @@ def translate_text(text_path, source_lang="en", target_lang="zh"):
         - translated text (str)
         - translated chunks in text (list[str]) to reduce voice drift in cloning
     """
+    # getting correct langauge codes
 
     # getting models and tokenizers
     model_name = f"Helsinki-NLP/opus-mt-{source_lang}-{target_lang}"
