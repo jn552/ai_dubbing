@@ -60,7 +60,12 @@ def main():
 
     # translate
     print("Starting Translation")
-    translated_text, translated_chunks = translate_text(transcript_path, source_lang=source_lang, target_lang=target_lang)
+    if source_lang == "en" or target_lang=="en":
+        translated_text, translated_chunks = translate_text(transcript_path, source_lang=source_lang, target_lang=target_lang)
+    else: # if english is not involved, use english to bridge the two languages (bridging english translation is saved as a text file)
+        translated_text, _ = translate_text(transcript_path, source_lang=source_lang, target_lang="en")
+        translated_text, translated_chunks = translate_text(os.path.join(output_dir, f"{base_name}.translated.txt"), source_lang="en", target_lang=target_lang)
+
 
     # save translated text
     translated_text_path = os.path.join(output_dir, f"{base_name}.translated.txt")

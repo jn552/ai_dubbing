@@ -6,7 +6,7 @@ nltk.download("punkt_tab")
 
 def translate_text(text_path, source_lang, target_lang):
     """
-    Translates text from source langauge to target langage
+    Translates text from source langauge to target langage, and saves the translated text into a txt file
 
     Args:
         text_path (.txt): text file containing text to translate
@@ -39,24 +39,16 @@ def translate_text(text_path, source_lang, target_lang):
         translated_chunk = tokenizer.decode(translated[0], skip_special_tokens=True)
         translated_chunks.append(translated_chunk)
 
-    return " ".join(translated_chunks), translated_chunks
+    translated_text = " ".join(translated_chunks)
 
-def main():
-    
     # constructing path to save output to
-    base_name = "testing_whisper"
-    output_dir = "outputs" 
-    translated_text_path = os.path.join(output_dir, base_name, f"{base_name}.translated.txt")
+    base_name = os.path.splitext(os.path.basename(text_path))[0]
+    base_output_dir = "outputs" 
+    translated_text_path = os.path.join(base_output_dir, base_name, f"{base_name}.translated.txt")
 
-    # translating
-    text_path = os.path.join(output_dir, base_name, f"{base_name}.txt")
-    translated_text = translate_text(text_path=text_path)
-
+    # writing translated text (if english used as a bridge between languages, the english translation will be overwritten)
     with open(translated_text_path, "w", encoding="utf-8") as f:
         f.write(translated_text)
-    
-if __name__ == "__main__":
-    main()
 
+    return translated_text, translated_chunks
 
-    
