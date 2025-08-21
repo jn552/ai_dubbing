@@ -20,11 +20,11 @@ def main():
     target_lang = sys.argv[4]
 
     # checking language compatability
-    if source_lang not in ["english", "mandarin", "french", "german", "russian", "korean", "arabic", "japanese", "italian"]:
-        print("Unsupported Language: choose from english, mandarin, french, german, russian, korean, arabic, japanese, or italian")
+    if source_lang not in ["english", "mandarin", "french", "german", "russian", "korean", "arabic", "japanese", "italian", "spanish"]:
+        print("Unsupported Language: choose from english, mandarin, french, german, russian, korean, arabic, japanese, spanish, or italian")
         sys.exit(1)
-    if target_lang not in ["english", "mandarin", "french", "german", "russian", "korean", "arabic", "japanese", "italian"]:
-        print("Unsupported Language: choose from english, mandarin, french, german, russian, korean, arabic, japanese, or italian")
+    if target_lang not in ["english", "mandarin", "french", "german", "russian", "korean", "arabic", "japanese", "italian", "spanish"]:
+        print("Unsupported Language: choose from english, mandarin, french, german, russian, korean, arabic, japanese, spanish or italian")
         sys.exit(1)
 
     # checking file existence
@@ -64,6 +64,7 @@ def main():
         translated_text, translated_chunks = translate_text(transcript_path, source_lang=source_lang, target_lang=target_lang)
     else: # if english is not involved, use english to bridge the two languages (bridging english translation is saved as a text file)
         translated_text, _ = translate_text(transcript_path, source_lang=source_lang, target_lang="en")
+        print(translated_text)
         translated_text, translated_chunks = translate_text(os.path.join(output_dir, f"{base_name}.translated.txt"), source_lang="en", target_lang=target_lang)
 
 
@@ -80,7 +81,7 @@ def main():
 
     # further instructions if video was provided
     if mode == "video":
-        print(f"Activate the seperate pyenv and run lip_sync_pipe.py with: python lip_sync_pipe.py {base_name}.translated.audio.wav {video_file}")
+        print(f"Activate the seperate pyenv and run lip_sync_pipe.py with: python lip_sync_pipe.py {output_dir}/jeremy.translated.audio.wav {video_file}")
     
 
 if __name__ == "__main__":
