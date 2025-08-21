@@ -1,5 +1,8 @@
 # ai_dubbing
-Automatically translates and dub yourself speaking a different language with lip syncing
+Automatically translate and dub yourself speaking a different language with lip syncing
+
+# DEMO
+[put unlisted youtube video link here
 
 
 for myself:
