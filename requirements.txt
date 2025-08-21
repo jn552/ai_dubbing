@@ -4,5 +4,6 @@ TTS==0.22.0
 ffmpeg-python
 nltk
 sentencepiece
-whisper
+git+https://github.com/openai/whisper.git
 sacremoses
+
