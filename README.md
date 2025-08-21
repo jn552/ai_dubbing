@@ -9,9 +9,9 @@ Automatic speech-to-text – Uses **Whisper** to convert audio from videos into 
 
 Multilingual translation – Uses **MarianMT** to support translation into multiple languages.
 
-Voice cloning & dubbing – Generates target language speech in the users voice.
+Voice cloning & dubbing – Uses **Coqui TTS** to generate target language speech in the users voice.
 
-Lip-sync video generation – Aligns dubbed audio with video lip movements.
+Lip-sync video generation – Uses **Wav2Lip** to align dubbed audio with video lip movements.
 
 
 
