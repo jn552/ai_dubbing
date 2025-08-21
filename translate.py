@@ -43,6 +43,8 @@ def translate_text(text_path, source_lang, target_lang):
 
     # constructing path to save output to
     base_name = os.path.splitext(os.path.basename(text_path))[0]
+    if len(base_name.split(".")) == 2: # only happens if english is used as a bridging language
+        base_name = base_name.split(".")[0]
     base_output_dir = "outputs" 
     translated_text_path = os.path.join(base_output_dir, base_name, f"{base_name}.translated.txt")
 

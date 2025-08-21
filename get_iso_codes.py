@@ -13,6 +13,8 @@ def get_iso_code(language):
         lang_code = "en"
     elif language == "mandarin":
         lang_code = "zh"
+    elif language == "spanish":
+        lang_code = "es"
     elif language == "french":
         lang_code = "fr"
     elif language == "german":

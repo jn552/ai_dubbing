@@ -19,7 +19,6 @@ def transcribe(audio_path, base_output_dir="outputs", model_name="small"):
 
     base_name = os.path.splitext(os.path.basename(audio_path))[0]  # grabs filename, splits name and extension, grabs name only
     output_dir = os.path.join(base_output_dir, base_name)  
-    os.makedirs(output_dir, exist_ok=True)
 
     # loading model and transcribing
     model = load_model(model_name)
