@@ -82,3 +82,4 @@ def clone_voice(text_chunks, reference_audio_path, output_path, target_lang):
         
     print(f"Saved translated cloned voice audio to: {output_path}")
 
+# sometimes some langauges exceed token limit more easily; look into this
