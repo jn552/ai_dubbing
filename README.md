@@ -19,7 +19,7 @@ Voice cloning & dubbing – Uses **Coqui TTS** to generate target language speec
 
 Lip-sync video generation – Uses **Wav2Lip** to align dubbed audio with video lip movements.
 
-# Installation and Usage
+# Installation
 
 1. **Clone the repository** and enter the project folder:
 
@@ -47,11 +47,21 @@ pyenv virtualenv 3.7.9 lip_venv
 pyenv activate lip_venv
 ```
 
-5. **Install dependencies** in the second virtual environment
+5. **Install dependencies** in the second virtual environment for lip syncing
 ```bash
 pip install -r lip_sync_requirements.txt
 ```
 
+# Usage
+1. Activate first virtual environment and run:
+ 
+ `python pipeline.py <audio/video> <audio_file/video_file> <source_language> <target_language>'
+
+ Pick audio if you just want to dub an audio file and video if you want to dub a full video.
+
+ Supported source and target languages: english, mandarin, french, german, russian, korean, arabic, japanese, spanish, or italian
+
+2. Activate second virtual environment (the lip sync one) and run the command that gets outputted after runnning the first python script. When the scirpt finishes, the output should be saved in the outputs folder.
 
 # Future Work / Improvements
 
