@@ -1,6 +1,7 @@
 # AI Dubbing
 Automatically translate and dub yourself speaking a different language with lip syncing
 
+This project is intended for **non-commercial use only** 
 # DEMO
 **English to Mandarin:**
 
