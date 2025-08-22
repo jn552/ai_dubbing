@@ -65,7 +65,6 @@ python pipeline.py <audio/video> <audio_file/video_file> <source_language> <targ
 
 # Future Work / Improvements
 
-for myself:
+1. Sometimes the length of the translated audio is longer/shorter than the original leading to mismatched lip movement. Potential fixes could include chunking the video into smaller segments and aligning lip moements in each chunk before concatenating into one larger video.
 
-pyenv activate wav2lip-py37
-source ai_dub_env/bin/activate
+2. Adding a low resource langauge such as Cantonese option would be nice. This could be implemented by finetuning the existing Mandarin model with open source Cantonese data, or data from my friends/family
