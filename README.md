@@ -21,21 +21,37 @@ Lip-sync video generation – Uses **Wav2Lip** to align dubbed audio with video 
 
 # Installation and Usage
 
-1. Clone the repo and run `cd ai_dubbing` to enter the repo.
+1. **Clone the repository** and enter the project folder:
 
-'''bash
+```bash
 git clone https://github.com/yourusername/ai_dubbing.git
 cd ai_dubbing
+```
 
-# Create a virtual environment (optional but recommended)
+2. **Create the first virtual environment** (this program requires two separate environments due to dependency conflicts) and activate it:
+```bash
 python -m venv venv
 source venv/bin/activate  # On Linux/Mac
 venv\Scripts\activate     # On Windows
+```
 
-# Install dependencies
+3. **Install dependencies** in the first environment:
+```bash
 pip install -r requirements.txt
+```
 
-3. Set up 
+4. **Deactivate the first virtual environment** and create the second one (using pyenv with Python 3.7.9) for lip syncing:
+```bash
+pyenv install 3.7.9
+pyenv virtualenv 3.7.9 lip_venv
+pyenv activate lip_venv
+```
+
+5. **Install dependencies** in the second virtual environment
+```bash
+pip install -r lip_sync_requirements.txt
+```
+
 
 # Future Work / Improvements
 
