@@ -55,7 +55,7 @@ pyenv activate lip_venv
 pip install -r lip_sync_requirements.txt
 ```
 
-6. **Download the Wav2Lip Model Checkpoint file** from https://drive.google.com/file/d/1RgFMaIfItZfqNXAs20s4Df8nKN6w9UmT/view?usp=drive_link and place it in externals/Wav2Lip/checkpoints/
+6. **Download the Wav2Lip Model Checkpoint file** from the official Wav2Lip README https://github.com/Rudrabha/Wav2Lip/blob/master/README.md and place it in externals/Wav2Lip/checkpoints/
 
 # Usage
 1. Activate first virtual environment and run:
