@@ -19,7 +19,7 @@ Voice cloning & dubbing – Uses **Coqui TTS** to generate target language speec
 
 Lip-sync video generation – Uses **Wav2Lip** to align dubbed audio with video lip movements.
 
-Suported Languages: **English, Mandarin, French, German, Russian, Korean, Arabic, Japanese, Spanish, or Italian**
+Suported Languages: **English, Mandarin, French, German, Russian, Korean, Arabic, Japanese, Spanish, and Italian**
 
 # Installation
 
@@ -61,7 +61,7 @@ python pipeline.py <audio/video> <audio_file/video_file> <source_language> <targ
 ```
  Pick audio if you just want to dub an audio file and video if you want to dub a full video.
 
- Supported source and target languages (enter in lowercase): english, mandarin, french, german, russian, korean, arabic, japanese, spanish, or italian
+ Supported source and target languages (enter in lowercase): english, mandarin, french, german, russian, korean, arabic, japanese, spanish, and italian
 
 2. Activate second virtual environment (the lip sync one) and run the command that gets outputted after runnning the first python script. When the scirpt finishes, the output should be saved in the outputs folder.
 
