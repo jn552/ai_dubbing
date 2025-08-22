@@ -19,6 +19,8 @@ Voice cloning & dubbing – Uses **Coqui TTS** to generate target language speec
 
 Lip-sync video generation – Uses **Wav2Lip** to align dubbed audio with video lip movements.
 
+Suported Languages: English, Mandarin, French, German, Russian, Korean, Arabic, Japanese, Spanish, or Italian
+
 # Installation
 
 1. **Clone the repository** and enter the project folder:
